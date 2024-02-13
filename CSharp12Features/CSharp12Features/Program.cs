@@ -20,3 +20,6 @@ foreach(AssemblyName name in mainAssembly.GetReferencedAssemblies())
     Console.WriteLine("{0:N0} types with {1:N0} methods in {2} assembly.", assembly.GetTypes().Length, methodCount, name.Name);
 }
 
+Console.OutputEncoding = System.Text.Encoding.UTF8;
+string grinningEmoji = char.ConvertFromUtf32(0x1F600);
+Console.WriteLine(grinningEmoji);
