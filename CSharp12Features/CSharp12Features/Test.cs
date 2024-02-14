@@ -26,4 +26,21 @@ public static class Test
         A_label:
             WriteLine($"After A_label");
     }
+
+    public static void FilteredException(string amount)
+    {
+        try
+        {
+            decimal amountValue = decimal.Parse(amount);
+            WriteLine($"Amount formatted as currency: {amountValue:C}");
+        }
+        catch (FormatException) when (amount.Contains("$"))
+        {
+            WriteLine("Amounts cannot use the dollar sign!");
+        }
+        catch (FormatException)
+        {
+            WriteLine("Amounts must only contain digits!");
+        }
+    }
 }

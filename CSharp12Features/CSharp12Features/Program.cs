@@ -45,4 +45,5 @@ unsafe
 //dynamic something = new object();
 //something.size();
 
-Test.PatternMatching();
+//Test.PatternMatching();
+Test.FilteredException("aa12");
