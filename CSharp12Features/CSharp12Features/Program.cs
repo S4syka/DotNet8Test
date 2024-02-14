@@ -46,4 +46,5 @@ unsafe
 //something.size();
 
 //Test.PatternMatching();
-Test.FilteredException("aa12");
+//Test.FilteredException("aa12");
+WriteLine(Test.FunctionalFibonacci(0));

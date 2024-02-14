@@ -43,4 +43,12 @@ public static class Test
             WriteLine("Amounts must only contain digits!");
         }
     }
+
+    public static int FunctionalFibonacci(int n) => n switch
+    {
+        (<= 0) => throw new ArgumentOutOfRangeException(),
+        1 => 0,
+        2 => 1,
+        _ => FunctionalFibonacci(n - 1) + FunctionalFibonacci(n - 2)
+    };
 }
