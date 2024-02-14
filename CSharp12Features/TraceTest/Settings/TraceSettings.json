@@ -1,0 +1,10 @@
+{
+    "MySwitch": {
+        "Value": "Warning"
+    },
+    "test11": {
+        "test22": {
+            "val": "ok"
+        }
+    }
+}
