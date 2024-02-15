@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp12Features", "CSharp1
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TraceTest", "TraceTest\TraceTest.csproj", "{8E75DA7C-C18A-4C40-A03A-48CBAAEBBAF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParameterTest", "ParameterTest\ParameterTest.csproj", "{187E6121-0C68-41E0-8337-8146F2DF9354}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParameterTest", "ParameterTest\ParameterTest.csproj", "{187E6121-0C68-41E0-8337-8146F2DF9354}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolymorhismTest", "PolymorhismTest\PolymorhismTest.csproj", "{9491E355-0DBF-4ED4-B1CD-E47A56AAB060}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{187E6121-0C68-41E0-8337-8146F2DF9354}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{187E6121-0C68-41E0-8337-8146F2DF9354}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{187E6121-0C68-41E0-8337-8146F2DF9354}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9491E355-0DBF-4ED4-B1CD-E47A56AAB060}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9491E355-0DBF-4ED4-B1CD-E47A56AAB060}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9491E355-0DBF-4ED4-B1CD-E47A56AAB060}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9491E355-0DBF-4ED4-B1CD-E47A56AAB060}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
