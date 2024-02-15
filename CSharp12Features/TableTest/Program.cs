@@ -1,15 +1,12 @@
 ﻿using Spectre.Console;
+using System.Runtime.CompilerServices;
 
-Table table = new Table();
+Table driverInformation = new Table();
+driverInformation.AddColumns("Driver Name", "Driver Type");
 
-table.AddColumn("[blue]vax[/]");
-table.AddColumn("[green]chemi[/]");
-table.AddEmptyRow();
-table.AddEmptyRow();
-table.AddEmptyRow();
-table.AddEmptyRow();
-table.AddRow("[blue]es ramamagari[/]", "rame yofila");
-//table.AddRow("pizdec?", "pizdec?", "pizdec?");
-table.AddRow("pizdec?");
-
-AnsiConsole.Write(table);
+var driveInfo = DriveInfo.GetDrives();
+foreach(var item in driveInfo)
+{
+    driverInformation.AddRow(item.Name, item.DriveType.ToString());
+}
+AnsiConsole.Write(driverInformation);
