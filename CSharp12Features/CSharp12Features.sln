@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParameterTest", "ParameterT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolymorhismTest", "PolymorhismTest\PolymorhismTest.csproj", "{9491E355-0DBF-4ED4-B1CD-E47A56AAB060}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableTest", "TableTest\TableTest.csproj", "{E8D46FC8-FB2C-47D8-843E-70F88C755D6A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{9491E355-0DBF-4ED4-B1CD-E47A56AAB060}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9491E355-0DBF-4ED4-B1CD-E47A56AAB060}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9491E355-0DBF-4ED4-B1CD-E47A56AAB060}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8D46FC8-FB2C-47D8-843E-70F88C755D6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8D46FC8-FB2C-47D8-843E-70F88C755D6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8D46FC8-FB2C-47D8-843E-70F88C755D6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8D46FC8-FB2C-47D8-843E-70F88C755D6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
