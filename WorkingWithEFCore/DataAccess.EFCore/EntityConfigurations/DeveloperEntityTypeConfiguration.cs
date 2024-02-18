@@ -8,6 +8,11 @@ internal sealed class DeveloperEntityTypeConfiguration : IEntityTypeConfiguratio
 {
     public void Configure(EntityTypeBuilder<Developer> builder)
     {
-        throw new NotImplementedException();
+        AddComments(builder);
+    }
+
+    private void AddComments(EntityTypeBuilder<Developer> builder)
+    {
+        builder.ToTable(tb => tb.HasComment("This is a developer table, containing info about developers"));
     }
 }

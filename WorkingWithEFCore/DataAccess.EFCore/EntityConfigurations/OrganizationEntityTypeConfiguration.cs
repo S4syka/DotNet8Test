@@ -8,6 +8,11 @@ internal sealed class OrganizationEntityTypeConfiguration : IEntityTypeConfigura
 {
     public void Configure(EntityTypeBuilder<Organization> builder)
     {
-        throw new NotImplementedException();
+        AddComments(builder);
+    }
+
+    private void AddComments(EntityTypeBuilder<Organization> builder)
+    {
+        builder.ToTable(tb => tb.HasComment("This is an Organization table, containing info about organizations"));
     }
 }

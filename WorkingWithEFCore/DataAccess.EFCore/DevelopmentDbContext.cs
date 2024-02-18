@@ -1,6 +1,7 @@
 ﻿using DataAccess.EFCore.EntityConfigurations;
 using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 
 namespace DataAccess.EFCore.Development;
 

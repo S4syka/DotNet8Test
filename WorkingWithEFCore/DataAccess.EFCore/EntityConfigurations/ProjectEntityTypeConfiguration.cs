@@ -1,11 +1,6 @@
 ﻿using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataAccess.EFCore.EntityConfigurations;
 
@@ -13,6 +8,11 @@ internal sealed class ProjectEntityTypeConfiguration : IEntityTypeConfiguration<
 {
     public void Configure(EntityTypeBuilder<Project> builder)
     {
-        throw new NotImplementedException();
+        AddComments(builder);
+    }
+
+    private void AddComments(EntityTypeBuilder<Project> builder)
+    {
+        builder.ToTable(tb => tb.HasComment("This is a project table, containing info about projects"));
     }
 }
