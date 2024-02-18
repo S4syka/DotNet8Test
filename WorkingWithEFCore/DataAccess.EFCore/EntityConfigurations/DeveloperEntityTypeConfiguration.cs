@@ -10,12 +10,15 @@ internal sealed class DeveloperEntityTypeConfiguration : IEntityTypeConfiguratio
     {
         AddComments(builder);
         AddColumnNames(builder);
-        AddMaxLengths(builder);
+        AddDataRequirements(builder);
     }
 
     private void AddComments(EntityTypeBuilder<Developer> builder)
     {
         builder.ToTable(tb => tb.HasComment("This is a developer table, containing info about developers"));
+
+        builder.Property(d => d.Email)
+            .HasComment("This is an Email of this developer and should be required");
     }
 
     private void AddColumnNames(EntityTypeBuilder<Developer> builder)
@@ -24,12 +27,13 @@ internal sealed class DeveloperEntityTypeConfiguration : IEntityTypeConfiguratio
             .HasColumnName("DeveloperId");
     }
 
-    private void AddMaxLengths(EntityTypeBuilder<Developer> builder)
+    private void AddDataRequirements(EntityTypeBuilder<Developer> builder)
     {
         builder.Property(d => d.Email)
             .HasMaxLength(128);
 
         builder.Property(d => d.Name)
-            .HasMaxLength(50);
+            .HasMaxLength(50)
+            .IsRequired();
     }
 }
