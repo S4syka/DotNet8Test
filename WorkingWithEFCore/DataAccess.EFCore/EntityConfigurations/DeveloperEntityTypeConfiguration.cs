@@ -10,6 +10,7 @@ internal sealed class DeveloperEntityTypeConfiguration : IEntityTypeConfiguratio
     {
         AddComments(builder);
         AddColumnNames(builder);
+        AddMaxLengths(builder);
     }
 
     private void AddComments(EntityTypeBuilder<Developer> builder)
@@ -21,5 +22,14 @@ internal sealed class DeveloperEntityTypeConfiguration : IEntityTypeConfiguratio
     {
         builder.Property(d => d.Id)
             .HasColumnName("DeveloperId");
+    }
+
+    private void AddMaxLengths(EntityTypeBuilder<Developer> builder)
+    {
+        builder.Property(d => d.Email)
+            .HasMaxLength(128);
+
+        builder.Property(d => d.Name)
+            .HasMaxLength(50);
     }
 }
