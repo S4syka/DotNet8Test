@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace DataAccess.EFCore.EntityConfigurations;
 
-internal class OrganizationEntityConfiguration : IEntityTypeConfiguration<Organization>
+internal sealed class OrganizationEntityTypeConfiguration : IEntityTypeConfiguration<Organization>
 {
     public void Configure(EntityTypeBuilder<Organization> builder)
     {

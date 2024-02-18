@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace DataAccess.EFCore.EntityConfigurations;
 
-internal sealed class DeveloperEntityConfiguration : IEntityTypeConfiguration<Developer>
+internal sealed class DeveloperEntityTypeConfiguration : IEntityTypeConfiguration<Developer>
 {
     public void Configure(EntityTypeBuilder<Developer> builder)
     {

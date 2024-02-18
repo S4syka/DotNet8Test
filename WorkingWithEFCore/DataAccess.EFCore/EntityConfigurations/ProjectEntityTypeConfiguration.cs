@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.EFCore.EntityConfigurations;
 
-internal class ProjectEntityConfiguration : IEntityTypeConfiguration<Project>
+internal sealed class ProjectEntityTypeConfiguration : IEntityTypeConfiguration<Project>
 {
     public void Configure(EntityTypeBuilder<Project> builder)
     {
