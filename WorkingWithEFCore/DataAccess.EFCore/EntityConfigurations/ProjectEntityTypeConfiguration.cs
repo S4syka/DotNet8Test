@@ -9,10 +9,17 @@ internal sealed class ProjectEntityTypeConfiguration : IEntityTypeConfiguration<
     public void Configure(EntityTypeBuilder<Project> builder)
     {
         AddComments(builder);
+        AddColumnNames(builder);
     }
 
     private void AddComments(EntityTypeBuilder<Project> builder)
     {
         builder.ToTable(tb => tb.HasComment("This is a project table, containing info about projects"));
+    }
+
+    private void AddColumnNames(EntityTypeBuilder<Project> builder)
+    {
+        builder.Property(p => p.Id)
+            .HasColumnName("ProjectId");
     }
 }

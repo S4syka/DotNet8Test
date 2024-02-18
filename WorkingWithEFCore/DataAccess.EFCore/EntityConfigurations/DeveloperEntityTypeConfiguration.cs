@@ -9,10 +9,17 @@ internal sealed class DeveloperEntityTypeConfiguration : IEntityTypeConfiguratio
     public void Configure(EntityTypeBuilder<Developer> builder)
     {
         AddComments(builder);
+        AddColumnNames(builder);
     }
 
     private void AddComments(EntityTypeBuilder<Developer> builder)
     {
         builder.ToTable(tb => tb.HasComment("This is a developer table, containing info about developers"));
+    }
+
+    private void AddColumnNames(EntityTypeBuilder<Developer> builder)
+    {
+        builder.Property(d => d.Id)
+            .HasColumnName("DeveloperId");
     }
 }
