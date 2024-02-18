@@ -17,8 +17,6 @@ public class DevelopmentDbContext(string connectionString) : DbContext()
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        new DeveloperEntityConfiguration().Configure(modelBuilder.Entity<Developer>());
-        new ProjectEntityConfiguration().Configure(modelBuilder.Entity<Project>());
-        new OrganizationEntityConfiguration().Configure(modelBuilder.Entity<Organization>());
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(DevelopmentDbContext).Assembly);
     }
 }
