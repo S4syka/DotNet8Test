@@ -10,6 +10,7 @@ internal sealed class ProjectEntityTypeConfiguration : IEntityTypeConfiguration<
     {
         AddComments(builder);
         AddColumnNames(builder);
+        AddDataRequirements(builder);
     }
 
     private void AddComments(EntityTypeBuilder<Project> builder)
@@ -21,5 +22,11 @@ internal sealed class ProjectEntityTypeConfiguration : IEntityTypeConfiguration<
     {
         builder.Property(p => p.Id)
             .HasColumnName("ProjectId");
+    }
+
+    private void AddDataRequirements(EntityTypeBuilder<Project> builder)
+    {
+        builder.Property(p => p.Started)
+            .HasPrecision(3);
     }
 }
