@@ -18,5 +18,5 @@ public class UnitOfWork : IUnitOfWork
     public IFoodRepository FoodRepo()  => _lazyFoodRepository.Value;
     public IGalleryRepository GalleryRepo() => _lazyGalleryRepository.Value;
     public IHomePictureRepository HomePictureRepo() => _lazyHomePictureRepository.Value;
-    public IRoomRepository RoomRepository() => _lazyRoomRepository.Value;
+    public IRoomRepository RoomRepo() => _lazyRoomRepository.Value;
 }

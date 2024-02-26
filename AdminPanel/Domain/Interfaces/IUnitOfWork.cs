@@ -11,5 +11,5 @@ public interface IUnitOfWork
     public IFoodRepository FoodRepo();
     public IGalleryRepository GalleryRepo();
     public IHomePictureRepository HomePictureRepo();
-    public IRoomRepository RoomRepository();
+    public IRoomRepository RoomRepo();
 }

@@ -4,6 +4,10 @@ namespace Domain.DTOs;
 
 public class Food (string name, string price, string description, string imageBase64) : BaseDTO()
 {
+    public Food() : this("", "", "", "")
+    {
+    }
+
     public string Name { get; set; } = name;
 
     public string Price { get; set; } = price;

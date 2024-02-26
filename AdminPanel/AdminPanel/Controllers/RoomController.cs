@@ -2,13 +2,15 @@
 using Domain.Interfaces;
 using Domain.DTOs;
 
+namespace AdminPanel.Controllers;
+
 public class RoomController : Controller
 {
     private readonly IRoomRepository _roomRepository;
 
-    public RoomController(IRoomRepository roomRepository)
+    public RoomController(IUnitOfWork unitOfWork)
     {
-        _roomRepository = roomRepository;
+        _roomRepository = unitOfWork.RoomRepo();
     }
 
     public ActionResult Index()
