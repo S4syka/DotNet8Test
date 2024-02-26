@@ -1,0 +1,25 @@
+﻿@model Domain.DTOs.Gallery
+
+<h2>Edit Gallery</h2>
+
+@using (Html.BeginForm("Edit", "Gallery", FormMethod.Post))
+{
+    @Html.HiddenFor(model => model.Id)
+    <div class="form-group">
+        @Html.LabelFor(model => model.Name)
+        @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Description)
+        @Html.TextBoxFor(model => model.Description, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Active)
+        @Html.CheckBoxFor(model => model.Active)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.ImageBase64)
+        @Html.TextBoxFor(model => model.ImageBase64, new { @class = "form-control" })
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+}

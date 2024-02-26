@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Domain.DTOs.Gallery>
+
+<h2>Galleries</h2>
+
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Active</th>
+        <th>Image</th>
+        <th>Actions</th>
+    </tr>
+    @foreach (var gallery in Model)
+    {
+        <tr>
+            <td>@gallery.Name</td>
+            <td>@gallery.Description</td>
+            <td>@(gallery.Active ? "Yes" : "No")</td>
+            <td><img src="data:image/jpeg;base64,@gallery.ImageBase64" style="max-height: 100px; max-width: 100px;" /></td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = gallery.Id }, new { @class = "btn btn-primary" })
+                @Html.ActionLink("Delete", "Delete", new { id = gallery.Id }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+</table>
+
+@Html.ActionLink("Add New Gallery", "Add", null, new { @class = "btn btn-success" })
