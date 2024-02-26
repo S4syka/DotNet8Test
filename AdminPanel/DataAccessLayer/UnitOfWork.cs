@@ -15,8 +15,8 @@ public class UnitOfWork : IUnitOfWork
     private Lazy<HomePictureRepository> _lazyHomePictureRepository = new Lazy<HomePictureRepository>();
     private Lazy<RoomRepository> _lazyRoomRepository = new Lazy<RoomRepository>();
 
-    public IFoodRepository FoodRepo  => _lazyFoodRepository.Value;
-    public IGalleryRepository GalleryRepo => _lazyGalleryRepository.Value;
-    public IHomePictureRepository HomePictureRepo => _lazyHomePictureRepository.Value;
-    public IRoomRepository RoomRepository => _lazyRoomRepository.Value;
+    public IFoodRepository FoodRepo()  => _lazyFoodRepository.Value;
+    public IGalleryRepository GalleryRepo() => _lazyGalleryRepository.Value;
+    public IHomePictureRepository HomePictureRepo() => _lazyHomePictureRepository.Value;
+    public IRoomRepository RoomRepository() => _lazyRoomRepository.Value;
 }

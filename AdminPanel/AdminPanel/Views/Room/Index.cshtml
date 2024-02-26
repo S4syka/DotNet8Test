@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Domain.DTOs.Room>
+
+<h2>Rooms</h2>
+
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Active</th>
+        <th>Image</th>
+        <th>Actions</th>
+    </tr>
+    @foreach (var room in Model)
+    {
+        <tr>
+            <td>@room.Name</td>
+            <td>@room.Description</td>
+            <td>@room.Price</td>
+            <td>@(room.Active ? "Yes" : "No")</td>
+            <td><img src="data:image/jpeg;base64,@room.ImageBase64" style="max-height: 100px; max-width: 100px;" /></td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = room.Id }, new { @class = "btn btn-primary" })
+                @Html.ActionLink("Delete", "Delete", new { id = room.Id }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+</table>
+
+@Html.ActionLink("Add New Room", "Add", null, new { @class = "btn btn-success" })

@@ -1,0 +1,12 @@
+﻿@model Domain.DTOs.Room
+
+<h2>Delete Room</h2>
+
+<p>Are you sure you want to delete this room?</p>
+
+@using (Html.BeginForm("Delete", "Room"))
+{
+    @Html.HiddenFor(model => model.Id)
+    <button type="submit" class="btn btn-danger">Delete</button>
+    @Html.ActionLink("Cancel", "Index", null, new { @class = "btn btn-default" })
+}
