@@ -2,6 +2,10 @@
 
 public class Gallery(string name, string description, string imageBase64) : BaseDTO()
 {
+    public Gallery() : this("", "", "")
+    {
+    }
+
     public string Name { get; set; } = name;
 
     public string Description { get; set; } = description;

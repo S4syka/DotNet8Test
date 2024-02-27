@@ -21,8 +21,24 @@
         @Html.CheckBoxFor(model => model.Active)
     </div>
     <div class="form-group">
-        @Html.LabelFor(model => model.ImageBase64)
-        @Html.TextBoxFor(model => model.ImageBase64, new { @class = "form-control" })
+        <label asp-for="ImageBase64"></label>
+        <input type="file" id="imageFile" class="form-control" />
+        <img id="previewImage" style="max-width: 200px; max-height: 200px;" />
+        <input type="hidden" id="imageBase64" name="ImageBase64" />
     </div>
+    <button type="button" id="uploadButton" class="btn btn-primary">Upload</button>
     <button type="submit" class="btn btn-primary">Save</button>
+
+    <script>
+        document.getElementById("uploadButton").addEventListener("click", function () {
+            var fileInput = document.getElementById("imageFile");
+            var file = fileInput.files[0];
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                document.getElementById("previewImage").setAttribute("src", e.target.result);
+                document.getElementById("imageBase64").value = e.target.result.split(",")[1];
+            };
+            reader.readAsDataURL(file);
+        });
+    </script>
 }

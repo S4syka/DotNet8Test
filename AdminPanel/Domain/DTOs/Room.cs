@@ -1,6 +1,6 @@
 ﻿namespace Domain.DTOs;
 
-public class Room(string name, string description, string price, string imageBase64) : BaseDTO
+public class Room(string name, string description, string price, string imageBase64) : BaseDTO()
 {
     public Room() : this("", "", "", "")
     {

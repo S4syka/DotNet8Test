@@ -1,17 +1,9 @@
-﻿@model Domain.DTOs.Gallery
+﻿@model Domain.DTOs.HomePicture
 
-<h2>Add Gallery</h2>
+<h2>Add HomePicture</h2>
 
-@using (Html.BeginForm("Add", "Gallery", FormMethod.Post))
+@using (Html.BeginForm("Add", "HomePicture", FormMethod.Post))
 {
-    <div class="form-group">
-        @Html.LabelFor(model => model.Name)
-        @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(model => model.Description)
-        @Html.TextBoxFor(model => model.Description, new { @class = "form-control" })
-    </div>
     <div class="form-group">
         @Html.LabelFor(model => model.Active)
         @Html.CheckBoxFor(model => model.Active)

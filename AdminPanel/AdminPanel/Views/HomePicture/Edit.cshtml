@@ -1,0 +1,17 @@
+﻿@model Domain.DTOs.HomePicture
+
+<h2>Edit Food</h2>
+
+@using (Html.BeginForm("Edit", "HomePicture", FormMethod.Post))
+{
+    @Html.HiddenFor(model => model.Id)
+    <div class="form-group">
+        @Html.LabelFor(model => model.Active)
+        @Html.CheckBoxFor(model => model.Active)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.ImageBase64)
+        @Html.TextBoxFor(model => model.ImageBase64, new { @class = "form-control" })
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+}

@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Domain.DTOs.HomePicture>
+
+<h2>HomePictures</h2>
+
+<table class="table">
+    <tr>
+        <th>Active</th>
+        <th>Image</th>
+    </tr>
+    @foreach (var homePicture in Model)
+    {
+        <tr>
+            <td>@(homePicture.Active ? "Yes" : "No")</td>
+            <td><img src="data:image/jpeg;base64,@homePicture.ImageBase64" style="max-height: 100px; max-width: 100px;" /></td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = homePicture.Id }, new { @class = "btn btn-primary" })
+                @Html.ActionLink("Delete", "Delete", new { id = homePicture.Id }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+</table>
+
+@Html.ActionLink("Add New Home Picture", "Add", null, new { @class = "btn btn-success" })
